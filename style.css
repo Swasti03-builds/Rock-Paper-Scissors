@@ -4,14 +4,21 @@
     text-align: center;
 }
 body{
-    background-color: #fff0f3;
+    background: linear-gradient(135deg, #fff0f3, #ffe5ec);
+    font-family: 'Poppins', sans-serif;
+}
+
+.container{
+    max-width: 800px;
+    margin: auto;
+    padding: 2rem;
 }
 h1{
-    font-size: 4rem;
-    background-color: #a4133c;
-    color: white;
-    height: 5rem;
-    line-height: 5rem;
+    font-size: 3rem;
+    font-weight: 700;
+    color: #800f2f;
+    margin-bottom: 1.5rem;
+    text-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
 .choices{
     display: flex;
@@ -21,22 +28,25 @@ h1{
     gap: 3rem;
 }
 .choice{
-    height: 165px;
-    width: 165px;
+    height: 180px;
+    width: 180px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #ffccd5, #ff8fab);
     display: flex;
     justify-content: center;
     align-items: center;
-    border-radius: 50%;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+    transition: all 0.3s ease;
+}
+
+.choice:hover{
+    background-color: #ff8fab;
+    transform: scale(1.1);
 }
 img{
-    height: 150px;
-    width: 150px;
-    object-fit: cover;
+    height: 170px;
+    width: 170px;
     border-radius: 50%;
-}
-.choice:hover{
-    background-color: #de5d75;
-    cursor: pointer;
 }
 .score_board{
     display: flex;
@@ -47,42 +57,34 @@ img{
     font-size: 2rem;
 }
 .score{
-    background-color: #ffb3c1;
-    padding: 1rem;
-    border-radius: 1rem;
-     color: #800f2f;
+    background-color: white;
+    padding: 1rem 1.5rem;
+    border-radius: 15px;
+    color: #800f2f;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.1);
 }
-#user{
-    font-weight: 900;
-    font-size: 2.5rem;
-}
-#comp{
-    font-weight: 900;
-    font-size: 2.5rem;
+#user, #comp{
+    font-size: 2rem;
 }
 .message{
-    line-height: 60px;
-    font-size: 2rem;   
-    background-color: #ffb3c1;
-    height: 60px;
-    width: 400px;
-    border-radius: 1rem;
-    text-align: center;
-    margin: 2rem auto 0 auto;
-    transition: background-color 0.3s ease;
+    font-size: 1.4rem;
+    background: linear-gradient(135deg, #ffb3c1, #ff8fab);
+    color: #800f2f;
+    padding: 12px 20px;
+    border-radius: 15px;
+    width: fit-content;
+    margin: 1.5rem auto;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
     font-weight: 600;
+    transition: all 0.3s ease;
 }
 #msg{
     display: inline-block;
     color: #800f2f;
 }
 .choiceshow{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    margin-top: 2rem;
-    font-size: 1.4rem;
-    font-weight: 650;
+    margin-top: 1.5rem;
+    font-size: 1.8rem;
     color: #800f2f;
+    line-height: 1.6;
 }
